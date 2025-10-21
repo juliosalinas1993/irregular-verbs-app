@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irregular Verbs Master</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Verbs Master">
+    <meta name="description" content="Master English irregular verbs through fun and interactive games!">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE4MCAxODAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxODAiIGhlaWdodD0iMTgwIiByeD0iMzAiIGZpbGw9InVybCgjZ3JhZGllbnQwX2xpbmVhcl8xXzEpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWRpZW50MF9saW5lYXJfMV8xIiB4MT0iMCIgeTE9IjAiIHgyPSIxODAiIHkyPSIxODAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY2N2VlYSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3NjRiYTIiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSI5MCIgeT0iMTEwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzAiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VjwvdGV4dD4KPC9zdmc+">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNiIgZmlsbD0idXJsKCNncmFkaWVudDBfbGluZWFyXzFfMSkiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwX2xpbmVhcl8xXzEiIHgxPSIwIiB5MT0iMCIgeDI9IjMyIiB5Mj0iMzIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iIzY2N2VlYSIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM3NjRiYTIiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8dGV4dCB4PSIxNiIgeT0iMjIiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5WPC90ZXh0Pgo8L3N2Zz4K">
+    
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100%;
+            color: #333;
+            animation: backgroundShift 10s ease-in-out infinite;
+        }
+        
+        @keyframes backgroundShift {
+            0%, 100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); }
+            50% { background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%); }
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+            100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 3rem;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            animation: titleBounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes titleBounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+        
+        .header p {
+            margin: 15px 0 0 0;
+            font-size: 1.2rem;
+            color: #5a67d8;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .game-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .game-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid transparent;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .game-card:hover::before {
+            left: 100%;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+            border-color: #667eea;
+        }
+        
+        .game-card.active {
+            border-color: #667eea;
+            background: linear-gradient(145deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.1));
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        }
+        
+        .game-card h3 {
+            margin: 0 0 15px 0;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.4rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .game-card p {
+            margin: 0;
+            color: #718096;
+            line-height: 1.5;
+        }
+        
+        .game-area {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            min-height: 400px;
+            display: none;
+        }
+        
+        .game-area.active {
+            display: block;
+        }
+        
+        .quiz-question {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .quiz-question h2 {
+            font-size: 1.8rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        
+        .verb-display {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        
+        .input-field {
+            padding: 15px 25px;
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box, linear-gradient(45deg, #667eea, #764ba2) border-box;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            min-width: 180px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .input-field:focus {
+            outline: none;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            background: linear-gradient(rgba(102, 126, 234, 0.05), rgba(102, 126, 234, 0.05)) padding-box, linear-gradient(45deg, #667eea, #764ba2) border-box;
+        }
+        
+        .input-field::placeholder {
+            color: #a0aec0;
+            font-weight: 500;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 8px;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #5a67d8, #6b46c1);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-success {
+            background: linear-gradient(45deg, #48bb78, #38a169);
+            color: white;
+        }
+        
+        .btn-success:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(45deg, #f56565, #e53e3e);
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(245, 101, 101, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(45deg, #a0aec0, #718096);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(160, 174, 192, 0.4);
+        }
+        
+        .feedback {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: none;
+            position: relative;
+            overflow: hidden;
+            animation: feedbackSlide 0.5s ease-out;
+        }
+        
+        @keyframes feedbackSlide {
+            0% { transform: translateY(-20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .feedback.correct {
+            background: linear-gradient(135deg, #c6f6d5, #9ae6b4);
+            color: #22543d;
+            border: 3px solid #48bb78;
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+        }
+        
+        .feedback.correct::before {
+            content: '🎉';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            animation: celebrate 0.6s ease-in-out;
+        }
+        
+        @keyframes celebrate {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            25% { transform: scale(1.2) rotate(-10deg); }
+            75% { transform: scale(1.2) rotate(10deg); }
+        }
+        
+        .feedback.incorrect {
+            background: linear-gradient(135deg, #fed7d7, #feb2b2);
+            color: #742a2a;
+            border: 3px solid #f56565;
+            box-shadow: 0 8px 25px rgba(245, 101, 101, 0.3);
+        }
+        
+        .feedback.incorrect::before {
+            content: '💪';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            animation: encourage 0.6s ease-in-out;
+        }
+        
+        @keyframes encourage {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .score-board {
+            display: flex;
+            justify-content: space-around;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(247, 250, 252, 0.8));
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .score-item {
+            text-align: center;
+            padding: 10px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .score-item:hover {
+            background: rgba(102, 126, 234, 0.1);
+            transform: scale(1.05);
+        }
+        
+        .score-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: scoreGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes scoreGlow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
+        }
+        
+        .score-label {
+            color: #5a67d8;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .matching-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+        
+        .matching-column {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .matching-item {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .matching-item:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .matching-item.selected {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .matching-item.matched {
+            background: #48bb78;
+            color: white;
+            border-color: #48bb78;
+            cursor: default;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 15px;
+            background: linear-gradient(90deg, #e2e8f0, #cbd5e0);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 25px 0;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .progress-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: progressShimmer 2s ease-in-out infinite;
+        }
+        
+        @keyframes progressShimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+            transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 0%;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: progressGlow 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes progressGlow {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        
+        .memory-card {
+            aspect-ratio: 1;
+            background: #667eea;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        .memory-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .memory-card.flipped {
+            background: white;
+            color: #4a5568;
+            border: 2px solid #667eea;
+        }
+        
+        .memory-card.matched {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .install-btn {
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            z-index: 1000 !important;
+            border-radius: 50px !important;
+            padding: 15px 25px !important;
+            font-size: 1rem !important;
+            box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4) !important;
+            animation: pulse 2s infinite !important;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .input-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .matching-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .memory-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .install-btn {
+                bottom: 10px !important;
+                right: 10px !important;
+                padding: 12px 20px !important;
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎯 Irregular Verbs Master</h1>
+            <p>Master English irregular verbs through fun and interactive games!</p>
+        </header>
+
+        <div class="game-selector">
+            <div class="game-card" onclick="selectGame('quiz')">
+                <h3>📝 Fill in the Blanks</h3>
+                <p>Complete the past and past participle forms of irregular verbs</p>
+            </div>
+            <div class="game-card" onclick="selectGame('matching')">
+                <h3>🔗 Matching Game</h3>
+                <p>Match base forms with their past and past participle forms</p>
+            </div>
+            <div class="game-card" onclick="selectGame('memory')">
+                <h3>🧠 Memory Challenge</h3>
+                <p>Find matching pairs of verb forms in this memory game</p>
+            </div>
+            <div class="game-card" onclick="selectGame('speed')">
+                <h3>⚡ Speed Round</h3>
+                <p>Quick-fire questions to test your verb knowledge under pressure</p>
+            </div>
+        </div>
+
+        <!-- Quiz Game -->
+        <div id="quiz-game" class="game-area">
+            <div class="score-board">
+                <div class="score-item">
+                    <div class="score-number" id="quiz-correct">0</div>
+                    <div class="score-label">Correct</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number" id="quiz-total">0</div>
+                    <div class="score-label">Total</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number" id="quiz-percentage">0%</div>
+                    <div class="score-label">Accuracy</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h2>Complete the verb forms:</h2>
+                <div class="verb-display" id="quiz-verb">go</div>
+                <div class="input-group">
+                    <input type="text" class="input-field" id="past-input" placeholder="Past form" maxlength="20">
+                    <input type="text" class="input-field" id="participle-input" placeholder="Past participle" maxlength="20">
+                </div>
+                <button class="btn btn-primary" onclick="checkQuizAnswer()">Check Answer</button>
+                <button class="btn btn-secondary" onclick="skipQuestion()">Skip</button>
+            </div>
+            
+            <div class="feedback" id="quiz-feedback"></div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="quiz-progress"></div>
+            </div>
+        </div>
+
+        <!-- Matching Game -->
+        <div id="matching-game" class="game-area">
+            <div class="score-board">
+                <div class="score-item">
+                    <div class="score-number" id="matching-score">0</div>
+                    <div class="score-label">Matches</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number" id="matching-attempts">0</div>
+                    <div class="score-label">Attempts</div>
+                </div>
+            </div>
+            
+            <h2 style="text-align: center; color: #4a5568;">Match the verb forms</h2>
+            <p style="text-align: center; color: #718096; margin-bottom: 20px;">Click on items from both columns to match them</p>
+            
+            <div class="matching-grid">
+                <div class="matching-column">
+                    <h3 style="text-align: center; color: #4a5568;">Base Forms</h3>
+                    <div id="base-forms"></div>
+                </div>
+                <div class="matching-column">
+                    <h3 style="text-align: center; color: #4a5568;">Past/Past Participle</h3>
+                    <div id="past-forms"></div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-primary" onclick="resetMatching()">New Round</button>
+            </div>
+        </div>
+
+        <!-- Memory Game -->
+        <div id="memory-game" class="game-area">
+            <div class="score-board">
+                <div class="score-item">
+                    <div class="score-number" id="memory-moves">0</div>
+                    <div class="score-label">Moves</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number" id="memory-matches">0</div>
+                    <div class="score-label">Matches</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number" id="memory-time">0</div>
+                    <div class="score-label">Time (s)</div>
+                </div>
+            </div>
+            
+            <h2 style="text-align: center; color: #4a5568;">Find the matching verb forms</h2>
+            <p style="text-align: center; color: #718096; margin-bottom: 20px;">Click cards to reveal verb forms and find matches</p>
+            
+            <div class="memory-grid" id="memory-grid"></div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-primary" onclick="startMemoryGame()">New Game</button>
+            </div>
+        </div>
+
+        <!-- Speed Round -->
+        <div id="speed-game" class="game-area">
+            <div class="score-board">
+                <div class="score-item">
+                    <div class="score-number" id="speed-score">0</div>
+                    <div class="score-label">Score</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number" id="speed-time">30</div>
+                    <div class="score-label">Time Left</div>
+                </div>
+                <div class="score-item">
+                    <div class="score-number" id="speed-streak">0</div>
+                    <div class="score-label">Streak</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <h2 id="speed-question">What's the past form of "go"?</h2>
+                <div class="input-group">
+                    <input type="text" class="input-field" id="speed-input" placeholder="Your answer" maxlength="20">
+                </div>
+                <button class="btn btn-primary" onclick="checkSpeedAnswer()">Submit</button>
+                <button class="btn btn-success" onclick="startSpeedRound()" id="speed-start">Start Speed Round!</button>
+            </div>
+            
+            <div class="feedback" id="speed-feedback"></div>
+        </div>
+    </div>
+
+    <script>
+        // Comprehensive list of common irregular verbs
+        const irregularVerbs = [
+            {base: 'be', past: 'was/were', participle: 'been'},
+            {base: 'have', past: 'had', participle: 'had'},
+            {base: 'do', past: 'did', participle: 'done'},
+            {base: 'say', past: 'said', participle: 'said'},
+            {base: 'get', past: 'got', participle: 'gotten'},
+            {base: 'make', past: 'made', participle: 'made'},
+            {base: 'go', past: 'went', participle: 'gone'},
+            {base: 'know', past: 'knew', participle: 'known'},
+            {base: 'take', past: 'took', participle: 'taken'},
+            {base: 'see', past: 'saw', participle: 'seen'},
+            {base: 'come', past: 'came', participle: 'come'},
+            {base: 'think', past: 'thought', participle: 'thought'},
+            {base: 'give', past: 'gave', participle: 'given'},
+            {base: 'find', past: 'found', participle: 'found'},
+            {base: 'tell', past: 'told', participle: 'told'},
+            {base: 'become', past: 'became', participle: 'become'},
+            {base: 'leave', past: 'left', participle: 'left'},
+            {base: 'feel', past: 'felt', participle: 'felt'},
+            {base: 'bring', past: 'brought', participle: 'brought'},
+            {base: 'begin', past: 'began', participle: 'begun'},
+            {base: 'keep', past: 'kept', participle: 'kept'},
+            {base: 'hold', past: 'held', participle: 'held'},
+            {base: 'write', past: 'wrote', participle: 'written'},
+            {base: 'stand', past: 'stood', participle: 'stood'},
+            {base: 'hear', past: 'heard', participle: 'heard'},
+            {base: 'let', past: 'let', participle: 'let'},
+            {base: 'mean', past: 'meant', participle: 'meant'},
+            {base: 'set', past: 'set', participle: 'set'},
+            {base: 'meet', past: 'met', participle: 'met'},
+            {base: 'run', past: 'ran', participle: 'run'},
+            {base: 'pay', past: 'paid', participle: 'paid'},
+            {base: 'sit', past: 'sat', participle: 'sat'},
+            {base: 'speak', past: 'spoke', participle: 'spoken'},
+            {base: 'lie', past: 'lay', participle: 'lain'},
+            {base: 'lead', past: 'led', participle: 'led'},
+            {base: 'read', past: 'read', participle: 'read'},
+            {base: 'grow', past: 'grew', participle: 'grown'},
+            {base: 'lose', past: 'lost', participle: 'lost'},
+            {base: 'send', past: 'sent', participle: 'sent'},
+            {base: 'build', past: 'built', participle: 'built'},
+            {base: 'understand', past: 'understood', participle: 'understood'},
+            {base: 'draw', past: 'drew', participle: 'drawn'},
+            {base: 'break', past: 'broke', participle: 'broken'},
+            {base: 'spend', past: 'spent', participle: 'spent'},
+            {base: 'cut', past: 'cut', participle: 'cut'},
+            {base: 'rise', past: 'rose', participle: 'risen'},
+            {base: 'drive', past: 'drove', participle: 'driven'},
+            {base: 'buy', past: 'bought', participle: 'bought'},
+            {base: 'wear', past: 'wore', participle: 'worn'},
+            {base: 'choose', past: 'chose', participle: 'chosen'}
+        ];
+
+        let currentGame = '';
+        let quizStats = {correct: 0, total: 0};
+        let currentVerb = null;
+        let matchingData = {selected: null, matches: 0, attempts: 0};
+        let memoryData = {cards: [], flipped: [], matches: 0, moves: 0, timer: null, startTime: null};
+        let speedData = {score: 0, timeLeft: 30, streak: 0, timer: null, active: false};
+
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            showInstallButton();
+        });
+
+        function showInstallButton() {
+            const installButton = document.createElement('button');
+            installButton.className = 'btn btn-success install-btn';
+            installButton.innerHTML = '📱 Install App';
+            installButton.onclick = installApp;
+            document.body.appendChild(installButton);
+        }
+
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                        document.querySelector('.install-btn')?.remove();
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        }
+
+        function selectGame(gameType) {
+            // Remove active class from all cards and game areas
+            document.querySelectorAll('.game-card').forEach(card => card.classList.remove('active'));
+            document.querySelectorAll('.game-area').forEach(area => area.classList.remove('active'));
+            
+            // Add active class to selected card and game area
+            event.target.closest('.game-card').classList.add('active');
+            document.getElementById(gameType + '-game').classList.add('active');
+            
+            currentGame = gameType;
+            
+            // Initialize the selected game
+            switch(gameType) {
+                case 'quiz':
+                    startQuizGame();
+                    break;
+                case 'matching':
+                    startMatchingGame();
+                    break;
+                case 'memory':
+                    startMemoryGame();
+                    break;
+                case 'speed':
+                    resetSpeedGame();
+                    break;
+            }
+        }
+
+        // Quiz Game Functions
+        function startQuizGame() {
+            nextQuestion();
+        }
+
+        function nextQuestion() {
+            currentVerb = irregularVerbs[Math.floor(Math.random() * irregularVerbs.length)];
+            document.getElementById('quiz-verb').textContent = currentVerb.base;
+            document.getElementById('past-input').value = '';
+            document.getElementById('participle-input').value = '';
+            document.getElementById('quiz-feedback').style.display = 'none';
+            
+            // Focus on first input
+            document.getElementById('past-input').focus();
+        }
+
+        function checkQuizAnswer() {
+            const pastInput = document.getElementById('past-input').value.trim().toLowerCase();
+            const participleInput = document.getElementById('participle-input').value.trim().toLowerCase();
+            const feedback = document.getElementById('quiz-feedback');
+            
+            quizStats.total++;
+            
+            const correctPast = currentVerb.past.toLowerCase().split('/');
+            const correctParticiple = currentVerb.participle.toLowerCase();
+            
+            const pastCorrect = correctPast.some(form => form === pastInput);
+            const participleCorrect = correctParticiple === participleInput;
+            
+            if (pastCorrect && participleCorrect) {
+                quizStats.correct++;
+                feedback.textContent = `Excellent! "${currentVerb.base}" → "${currentVerb.past}" → "${currentVerb.participle}"`;
+                feedback.className = 'feedback correct';
+            } else {
+                feedback.textContent = `Not quite. "${currentVerb.base}" → "${currentVerb.past}" → "${currentVerb.participle}"`;
+                feedback.className = 'feedback incorrect';
+            }
+            
+            feedback.style.display = 'block';
+            updateQuizStats();
+            
+            setTimeout(() => {
+                nextQuestion();
+            }, 2500);
+        }
+
+        function skipQuestion() {
+            quizStats.total++;
+            updateQuizStats();
+            nextQuestion();
+        }
+
+        function updateQuizStats() {
+            document.getElementById('quiz-correct').textContent = quizStats.correct;
+            document.getElementById('quiz-total').textContent = quizStats.total;
+            const percentage = quizStats.total > 0 ? Math.round((quizStats.correct / quizStats.total) * 100) : 0;
+            document.getElementById('quiz-percentage').textContent = percentage + '%';
+            
+            const progress = Math.min((quizStats.total / 20) * 100, 100);
+            document.getElementById('quiz-progress').style.width = progress + '%';
+        }
+
+        // Matching Game Functions
+        function startMatchingGame() {
+            resetMatching();
+        }
+
+        function resetMatching() {
+            matchingData = {selected: null, matches: 0, attempts: 0};
+            
+            // Select 6 random verbs for matching
+            const selectedVerbs = irregularVerbs.sort(() => 0.5 - Math.random()).slice(0, 6);
+            
+            const baseForms = document.getElementById('base-forms');
+            const pastForms = document.getElementById('past-forms');
+            
+            baseForms.innerHTML = '';
+            pastForms.innerHTML = '';
+            
+            // Create base form items
+            selectedVerbs.forEach((verb, index) => {
+                const baseItem = document.createElement('div');
+                baseItem.className = 'matching-item';
+                baseItem.textContent = verb.base;
+                baseItem.dataset.id = index;
+                baseItem.dataset.type = 'base';
+                baseItem.onclick = () => selectMatchingItem(baseItem, index, 'base');
+                baseForms.appendChild(baseItem);
+            });
+            
+            // Create past form items (shuffled)
+            const pastItems = selectedVerbs.map((verb, index) => ({
+                text: `${verb.past} / ${verb.participle}`,
+                id: index
+            })).sort(() => 0.5 - Math.random());
+            
+            pastItems.forEach(item => {
+                const pastItem = document.createElement('div');
+                pastItem.className = 'matching-item';
+                pastItem.textContent = item.text;
+                pastItem.dataset.id = item.id;
+                pastItem.dataset.type = 'past';
+                pastItem.onclick = () => selectMatchingItem(pastItem, item.id, 'past');
+                pastForms.appendChild(pastItem);
+            });
+            
+            updateMatchingStats();
+        }
+
+        function selectMatchingItem(element, id, type) {
+            if (element.classList.contains('matched')) return;
+            
+            if (matchingData.selected) {
+                if (matchingData.selected.element === element) {
+                    // Deselect
+                    element.classList.remove('selected');
+                    matchingData.selected = null;
+                    return;
+                }
+                
+                matchingData.attempts++;
+                
+                if (matchingData.selected.id === id && matchingData.selected.type !== type) {
+                    // Match found!
+                    element.classList.add('matched');
+                    matchingData.selected.element.classList.add('matched');
+                    matchingData.matches++;
+                    matchingData.selected = null;
+                    
+                    if (matchingData.matches === 6) {
+                        setTimeout(() => {
+                            showCustomAlert('🎉 Congratulations! You matched all verbs! 🎉', 'success');
+                        }, 500);
+                    }
+                } else {
+                    // No match
+                    matchingData.selected.element.classList.remove('selected');
+                    matchingData.selected = null;
+                }
+                
+                updateMatchingStats();
+            } else {
+                // First selection
+                document.querySelectorAll('.matching-item.selected').forEach(item => {
+                    item.classList.remove('selected');
+                });
+                element.classList.add('selected');
+                matchingData.selected = {element, id, type};
+            }
+        }
+
+        function updateMatchingStats() {
+            document.getElementById('matching-score').textContent = matchingData.matches;
+            document.getElementById('matching-attempts').textContent = matchingData.attempts;
+        }
+
+        // Memory Game Functions
+        function startMemoryGame() {
+            memoryData = {cards: [], flipped: [], matches: 0, moves: 0, timer: null, startTime: Date.now()};
+            
+            // Select 8 verbs and create pairs
+            const selectedVerbs = irregularVerbs.sort(() => 0.5 - Math.random()).slice(0, 8);
+            const cardPairs = [];
+            
+            selectedVerbs.forEach(verb => {
+                cardPairs.push({text: verb.base, id: verb.base});
+                cardPairs.push({text: `${verb.past}/${verb.participle}`, id: verb.base});
+            });
+            memoryData.cards = cardPairs.sort(() => 0.5 - Math.random());
+            
+            
+            const grid = document.getElementById('memory-grid');
+            grid.innerHTML = '';
+            
+            memoryData.cards.forEach((card, index) => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'memory-card';
+                cardElement.textContent = '?';
+                cardElement.dataset.index = index;
+                cardElement.onclick = () => flipCard(index);
+                grid.appendChild(cardElement);
+            });
+            
+            updateMemoryStats();
+            startMemoryTimer();
+        }
+
+        function flipCard(index) {
+            if (memoryData.flipped.length >= 2) return;
+            if (memoryData.flipped.includes(index)) return;
+            
+            const cardElement = document.querySelectorAll('.memory-card')[index];
+            cardElement.textContent = memoryData.cards[index].text;
+            cardElement.classList.add('flipped');
+            memoryData.flipped.push(index);
+            
+            if (memoryData.flipped.length === 2) {
+                memoryData.moves++;
+                updateMemoryStats();
+                
+                setTimeout(() => {
+                    checkMemoryMatch();
+                }, 1000);
+            }
+        }
+
+        function checkMemoryMatch() {
+            const [first, second] = memoryData.flipped;
+            const firstCard = memoryData.cards[first];
+            const secondCard = memoryData.cards[second];
+            const cardElements = document.querySelectorAll('.memory-card');
+            
+            if (firstCard.id === secondCard.id) {
+                // Match!
+                cardElements[first].classList.add('matched');
+                cardElements[second].classList.add('matched');
+                memoryData.matches++;
+                
+                if (memoryData.matches === 8) {
+                    clearInterval(memoryData.timer);
+                    setTimeout(() => {
+                        showCustomAlert(`🧠 Congratulations! You completed the memory game in ${memoryData.moves} moves! 🧠`, 'success');
+                    }, 500);
+                }
+            } else {
+                // No match
+                cardElements[first].classList.remove('flipped');
+                cardElements[second].classList.remove('flipped');
+                cardElements[first].textContent = '?';
+                cardElements[second].textContent = '?';
+            }
+            
+            memoryData.flipped = [];
+            updateMemoryStats();
+        }
+
+        function startMemoryTimer() {
+            memoryData.timer = setInterval(() => {
+                const elapsed = Math.floor((Date.now() - memoryData.startTime) / 1000);
+                document.getElementById('memory-time').textContent = elapsed;
+            }, 1000);
+        }
+
+        function updateMemoryStats() {
+            document.getElementById('memory-moves').textContent = memoryData.moves;
+            document.getElementById('memory-matches').textContent = memoryData.matches;
+        }
+
+        // Speed Round Functions
+        function resetSpeedGame() {
+            speedData = {score: 0, timeLeft: 30, streak: 0, timer: null, active: false};
+            updateSpeedStats();
+            document.getElementById('speed-start').style.display = 'inline-block';
+            document.getElementById('speed-input').style.display = 'none';
+            document.querySelector('#speed-game .btn-primary').style.display = 'none';
+            document.getElementById('speed-feedback').style.display = 'none';
+        }
+
+        function startSpeedRound() {
+            speedData = {score: 0, timeLeft: 30, streak: 0, timer: null, active: true};
+            document.getElementById('speed-start').style.display = 'none';
+            document.getElementById('speed-input').style.display = 'inline-block';
+            document.querySelector('#speed-game .btn-primary').style.display = 'inline-block';
+            
+            nextSpeedQuestion();
+            
+            speedData.timer = setInterval(() => {
+                speedData.timeLeft--;
+                updateSpeedStats();
+                
+                if (speedData.timeLeft <= 0) {
+                    endSpeedRound();
+                }
+            }, 1000);
+        }
+
+        function nextSpeedQuestion() {
+            if (!speedData.active) return;
+            
+            currentVerb = irregularVerbs[Math.floor(Math.random() * irregularVerbs.length)];
+            const questionType = Math.random() > 0.5 ? 'past' : 'participle';
+            
+            if (questionType === 'past') {
+                document.getElementById('speed-question').textContent = `What's the past form of "${currentVerb.base}"?`;
+            } else {
+                document.getElementById('speed-question').textContent = `What's the past participle of "${currentVerb.base}"?`;
+            }
+            
+            document.getElementById('speed-input').value = '';
+            document.getElementById('speed-input').dataset.type = questionType;
+            document.getElementById('speed-input').focus();
+        }
+
+        function checkSpeedAnswer() {
+            if (!speedData.active) return;
+            
+            const input = document.getElementById('speed-input');
+            const answer = input.value.trim().toLowerCase();
+            const questionType = input.dataset.type;
+            const feedback = document.getElementById('speed-feedback');
+            
+            let correct = false;
+            
+            if (questionType === 'past') {
+                const correctAnswers = currentVerb.past.toLowerCase().split('/');
+                correct = correctAnswers.some(form => form === answer);
+            } else {
+                correct = currentVerb.participle.toLowerCase() === answer;
+            }
+            
+            if (correct) {
+                speedData.score += (speedData.streak + 1) * 10;
+                speedData.streak++;
+                feedback.textContent = `Correct! +${(speedData.streak) * 10} points`;
+                feedback.className = 'feedback correct';
+            } else {
+                speedData.streak = 0;
+                feedback.textContent = `Incorrect. The answer was "${questionType === 'past' ? currentVerb.past : currentVerb.participle}"`;
+                feedback.className = 'feedback incorrect';
+            }
+            
+            feedback.style.display = 'block';
+            updateSpeedStats();
+            
+            setTimeout(() => {
+                feedback.style.display = 'none';
+                nextSpeedQuestion();
+            }, 1500);
+        }
+
+        function endSpeedRound() {
+            clearInterval(speedData.timer);
+            speedData.active = false;
+            
+            setTimeout(() => {
+                showCustomAlert(`🚀 Time's up! Final score: ${speedData.score} points with a best streak of ${speedData.streak}! 🚀`, 'info');
+                resetSpeedGame();
+            }, 500);
+        }
+
+        function updateSpeedStats() {
+            document.getElementById('speed-score').textContent = speedData.score;
+            document.getElementById('speed-time').textContent = speedData.timeLeft;
+            document.getElementById('speed-streak').textContent = speedData.streak;
+        }
+
+        // Custom Alert Function (replaces browser alerts)
+        function showCustomAlert(message, type = 'info') {
+            const alertDiv = document.createElement('div');
+            alertDiv.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: ${type === 'success' ? 'linear-gradient(135deg, #c6f6d5, #9ae6b4)' : 'linear-gradient(135deg, #bee3f8, #90cdf4)'};
+                color: ${type === 'success' ? '#22543d' : '#2a4365'};
+                padding: 30px;
+                border-radius: 20px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+                z-index: 10000;
+                text-align: center;
+                font-weight: 700;
+                font-size: 1.2rem;
+                max-width: 90%;
+                border: 3px solid ${type === 'success' ? '#48bb78' : '#4299e1'};
+                animation: alertSlide 0.5s ease-out;
+            `;
+            
+            alertDiv.innerHTML = `
+                ${message}
+                <br><br>
+                <button onclick="this.parentElement.remove()" style="
+                    background: ${type === 'success' ? '#48bb78' : '#4299e1'};
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    font-size: 1rem;
+                ">OK</button>
+            `;
+            
+            document.body.appendChild(alertDiv);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (alertDiv.parentElement) {
+                    alertDiv.remove();
+                }
+            }, 5000);
+        }
+
+        // Keyboard event listeners
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                if (currentGame === 'quiz' && document.getElementById('quiz-game').classList.contains('active')) {
+                    checkQuizAnswer();
+                } else if (currentGame === 'speed' && speedData.active) {
+                    checkSpeedAnswer();
+                }
+            }
+        });
+
+        // Initialize with quiz game
+        selectGame('quiz');
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'992173a6965237ff',t:'MTc2MTA1NzAxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
